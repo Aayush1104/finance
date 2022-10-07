@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bruh in stocks %}
+            <tr>
+                <td> {{ bruh["symbol"] }} </td>
+                <td> {{ bruh["name"] }} </td>
+                <td> {{ bruh["wholeshares"] }} </td>
+                <td> {{ usd(bruh["price"]) }} </td>
+                <td> {{ usd(bruh["wholeshares"] * bruh["price"]) }} </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ cash }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{ total }}</td>
+        </tfoot>
+    </table>
+{% endblock %}
