@@ -6,6 +6,4 @@ $ export API_KEY=value
 $ flask run
 This should allow you to open up the link of the finance website. 
 
-The functionality of this project includes the ability for a user to register for their own account which is stored in a database. The correct password is required to access
-an account on this site. Users are also able to search up the updated stock prices of real companies. Each user is given $10,000 USD to spend on the stock market. Of course,
-as this is a replication, the money is not real. Similar to a normal stock market, the user can sell stocks and see the history of their purchases and sales.
+This dynamic Python project offers users an immersive experience, allowing them to create personalized accounts through a seamless registration process with secure password authentication. The platform empowers users to explore real-time stock market trends using the IEX API and engage in a virtual stock market simulation with an initial $10,000 USD capital. Built on the Flask framework, this application seamlessly combines user authentication, real-time data retrieval, and transaction history for an engaging exploration of financial markets.
